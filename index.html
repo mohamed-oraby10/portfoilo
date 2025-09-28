@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohamed Oraby - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <style>
+      body {
+        background-color: #d6d8db; 
+        font-family: "Segoe UI", Tahoma, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        padding: 60px 20px;
+        position: relative;
+      }
+      section:not(:first-of-type):not(:last-of-type)::after {
+        content: "";
+        display: block;
+        width: 80%;
+        height: 2px;
+        background-color: #9333ea;
+        margin: 60px auto 0 auto;
+        opacity: 0.9;
+        border-radius: 2px;
+      }
+      .section__pic-container img {
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #9333ea;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        margin-bottom: 15px;
+      }
+      .section__text__p1 {
+        font-size: 1.7rem; 
+        font-weight: 600;
+      }
+      .details-container {
+        background-color: #f9fafb;
+        border: 1px solid #d1d5db;
+        border-radius: 12px;
+        padding: 20px;
+        margin: 15px 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+      .color-container {
+        border-left: 4px solid #9333ea;
+      }
+      .education-card {
+        max-width: 400px;
+        margin: 20px auto 0 auto;
+        text-align: center;
+      }
+      #skills .article-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* كبرنا العرض */
+        gap: 18px;
+      }
+      #skills article {
+        background: #ffffff;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 1rem;
+        border: 1px solid #e5e7eb;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        transition: 0.3s;
+      }
+      #skills article:hover {
+        background: #f3f4f6;
+        transform: translateY(-3px);
+      }
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 100;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.6);
+        justify-content: center;
+        align-items: center;
+      }
+      .modal-content {
+        background: #fff;
+        padding: 25px;
+        border-radius: 12px;
+        max-width: 400px;
+        text-align: center;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      }
+      .modal-content h2 { margin-bottom: 15px; }
+      .modal-content p { margin: 8px 0; }
+      .close-btn {
+        margin-top: 15px;
+        background: #9333ea;
+        color: #fff;
+        border: none;
+        padding: 10px 18px;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .contact-info-container img.icon {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        margin-right: 8px;
+      }
+      .project-date {
+        margin: 10px 0 25px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Mohamed Oraby</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/WhatsApp Image 2025-09-27 at 02.28.03_5542a57b.jpg"
+          alt="Mohamed Oraby profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Mohamed Oraby</h1>
+        <p class="section__text__p2">Flutter Developer</p>
+        <div class="btn-container">
+          <a href="./assets/My-Cv.pdf" download="Mohamed-Oraby-CV">
+            <button class="btn btn-color-2">
+              Download CV
+            </button>
+          </a>
+          <button class="btn btn-color-1" onclick="openModal()">
+            Contact Info
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="about-details-container">
+          <div class="text-container">
+            <p>
+              I'm a Flutter Mobile App Developer with 1 year of practical experience
+              building high-quality cross-platform applications for Android and iOS.
+            </p>
+            <p>
+              I specialize in BLoC and Riverpod for scalable state management,
+              and integrate features such as Firebase Authentication, cloud messaging,
+              real-time databases, and REST APIs.
+            </p>
+            <p>
+              I’m passionate about clean architecture, writing maintainable code,
+              and delivering smooth, user-friendly experiences.
+            </p>
+            <p>
+              Key technologies: Flutter • Dart • BLoC • Riverpod • Firebase • REST APIs • Git
+            </p>
+          </div>
+          <div class="about-containers">
+            <div class="details-container education-card">
+              <img src="./assets/education.png" alt="Education icon" class="icon" />
+              <h3>Education</h3>
+              <p>Bachelor's in Computer Science<br />Fayoum University (2021 – 2025)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+
+          <div class="details-container color-container">
+            <h2 class="experience-sub-title">Flutter Developer Trainee – ITI</h2>
+            <p><strong>06/2024 – 07/2024</strong></p>
+            <p>Completed an intensive 120-hour training on cross-platform mobile development using Flutter.</p>
+            <p>Experienced in developing responsive UIs and managing application state using state management.</p>
+          </div>
+
+          <div class="details-container color-container">
+            <h2 class="experience-sub-title">Trainee – DEPI</h2>
+            <p><strong>11/2024 – 05/2025</strong></p>
+            <p>Contributed to the development of a Striky fitness app in collaboration with a team.</p>
+            <p>Studied Business English, freelancing, and soft skills to enhance communication and career development.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <p class="section__text__p1">What I Know</p>
+      <h1 class="title">Skills</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <h2 class="experience-sub-title">Technical Skills</h2>
+            <div class="article-container">
+              <article><h3>Dart</h3></article>
+              <article><h3>Flutter</h3></article>
+              <article><h3>Bloc / Cubit</h3></article>
+              <article><h3>Firebase Services</h3></article>
+              <article><h3>RESTful APIs</h3></article>
+              <article><h3>Clean Architecture</h3></article>
+              <article><h3>C++</h3></article>
+              <article><h3>Kotlin</h3></article>
+              <article><h3>OOP</h3></article>
+              <article><h3>Data Structures & Algorithms</h3></article>
+              <article><h3>Hive</h3></article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+
+          <div class="details-container color-container">
+            <h2 class="experience-sub-title project-title">Dr Chat – Graduation Project</h2>
+            <p>
+              A therapist chatbot that allows users to share their mental health concerns and receive support.  
+              Developed with Flutter and Flask backend.  
+              Implemented secure authentication, guest mode, and profile management.  
+              Stored user data and chat history with MongoDB and Hive for offline access.
+            </p>
+            <p class="project-date"><strong>07/2025 – 10/2025</strong></p>
+            <div class="btn-container" style="margin-top:20px;">
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/mohamed-oraby10/Dr-Chat'">
+                Github
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <h2 class="experience-sub-title project-title">DayTask – Task Management App</h2>
+            <p>
+              Productivity application for team collaboration and task management.  
+              Built task scheduling, progress tracking, and team collaboration features.  
+              Implemented real-time chat and notifications.  
+              Integrated Firebase Authentication, Firestore, Hive with Bloc/Cubit & Provider.
+            </p>
+            <p class="project-date"><strong>03/2025 – 06/2025</strong></p>
+            <div class="btn-container" style="margin-top:20px;">
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/mohamed-oraby10/day_task'">
+                Github
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" class="icon contact-icon email-icon" />
+          <p><a href="mailto:mohamedoraby0500@gmail.com">mohamedoraby0500@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/call.png" class="icon contact-icon" />
+          <p><a href="tel:+201061883008">+201061883008</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" class="icon contact-icon" />
+          <p><a href="https://linkedin.com/in/mohamedoraby">LinkedIn</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/github.png" class="icon contact-icon" />
+          <p><a href="https://github.com/mohamed-oraby10">Github</a></p>
+        </div>
+      </div>
+    </section>
+
+    <div id="contactModal" class="modal">
+      <div class="modal-content">
+        <h2>Contact Info</h2>
+        <p>📧 mohamedoraby0500@gmail.com</p>
+        <p>📞 +201061883008</p>
+        <p><a href="https://linkedin.com/in/mohamedoraby">LinkedIn</a></p>
+        <p><a href="https://github.com/mohamed-oraby10">Github</a></p>
+        <button class="close-btn" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 Mohamed Oraby. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      function openModal() {
+        document.getElementById("contactModal").style.display = "flex";
+      }
+      function closeModal() {
+        document.getElementById("contactModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
