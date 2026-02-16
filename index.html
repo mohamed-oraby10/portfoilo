@@ -247,6 +247,45 @@
   }
 
 }
+#profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.section__text {
+  max-width: 500px;
+}
+.btn-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+
+  #profile {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .section__text {
+    max-width: 100%;
+  }
+
+  .section__pic-container img {
+    width: 180px;
+    height: 180px;
+  }
+
+}
+.section__text {
+  text-align: center;
+}
 
 
     </style>
