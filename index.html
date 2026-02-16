@@ -158,6 +158,97 @@
   border-radius: 8px;
 }
 
+/* ============================= */
+/* Responsive Design */
+/* ============================= */
+
+@media screen and (max-width: 1024px) {
+
+  /* Projects */
+  #projects .details-container.color-container {
+    flex: 0 1 100%;
+    max-width: 100%;
+  }
+
+  /* Experience */
+  #experience .about-containers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* About */
+  .section-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+/* ============================= */
+
+@media screen and (max-width: 768px) {
+
+  /* Navigation */
+  #desktop-nav {
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+  }
+
+  /* Profile Section */
+  #profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section__pic-container img {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Titles */
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .section__text__p1 {
+    font-size: 1.3rem;
+  }
+
+  /* Buttons */
+  .btn-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+}
+
+/* ============================= */
+
+@media screen and (max-width: 480px) {
+
+  section {
+    padding: 40px 15px;
+  }
+
+  .details-container {
+    padding: 15px;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+}
+
+
     </style>
   </head>
   <body>
