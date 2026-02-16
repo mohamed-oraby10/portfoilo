@@ -117,6 +117,47 @@
         margin: 10px 0 25px;
         font-weight: bold;
       }
+      #projects ul {
+  padding-left: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#projects ul li {
+  padding: 6px 0;
+  line-height: 1.6;
+}
+
+#about .title {
+  margin-bottom: 40px;
+}
+#projects .about-containers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px; 
+  justify-content: center;
+}
+
+#projects .details-container.color-container {
+  flex: 0 1 48%;
+  max-width: 48%;
+  box-sizing: border-box;
+  margin: 15px 0;
+}
+
+#projects .project-image-container {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+#projects .project-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
     </style>
   </head>
   <body>
@@ -162,20 +203,24 @@
         <div class="about-details-container">
           <div class="text-container">
             <p>
-              I'm a Flutter Mobile App Developer with 1 year of practical experience
-              building high-quality cross-platform applications for Android and iOS.
+              I am Flutter Mobile App Developer specializing in building high-quality cross-platform Android and iOS apps with a strong focus on clean architecture, scalable state management, and smooth user experiences.
             </p>
             <p>
-              I specialize in BLoC and Riverpod for scalable state management,
-              and integrate features such as Firebase Authentication, cloud messaging,
-              real-time databases, and REST APIs.
+              Worked on multiple freelance and personal projects, including 3 key apps: a therapist chatbot, a task management app, and an e-commerce app.
             </p>
             <p>
-              I’m passionate about clean architecture, writing maintainable code,
-              and delivering smooth, user-friendly experiences.
+             Skilled in Flutter, Dart, Bloc, Cubit, Provider, Clean Architecture, MVVM and integrating Firebase (Auth, Cloud Messaging, Realtime Database and Firebase Firestore) with REST APIs. 
             </p>
             <p>
-              Key technologies: Flutter • Dart • BLoC • Riverpod • Firebase • REST APIs • Git
+              I follow best practices in Git, UI/UX, and testing to deliver maintainable, high-performance applications.
+            </p>
+             <p>
+              Highlights:
+Built a mental health graduation app with A+ distinction
+Developed a complete task management app during a summer course
+            </p>
+             <p>
+              Open to full-time, freelance, remote, on-site or internship opportunities.
             </p>
           </div>
           <div class="about-containers">
@@ -222,65 +267,113 @@
             <h2 class="experience-sub-title">Technical Skills</h2>
             <div class="article-container">
               <article><h3>Dart</h3></article>
-              <article><h3>Flutter</h3></article>
-              <article><h3>Bloc / Cubit</h3></article>
-              <article><h3>Firebase Services</h3></article>
-              <article><h3>RESTful APIs</h3></article>
-              <article><h3>Clean Architecture</h3></article>
               <article><h3>C++</h3></article>
-              <article><h3>Kotlin</h3></article>
               <article><h3>OOP</h3></article>
-              <article><h3>Data Structures & Algorithms</h3></article>
+              <article><h3>Data Structures</h3></article>
+              <article><h3>Algorithms</h3></article>
+              <article><h3>Flutter</h3></article>
+              <article><h3>Bloc</h3></article>
+              <article><h3>Cubit</h3></article>
+              <article><h3>Provider</h3></article>
+              <article><h3>MVVM</h3></article>
+              <article><h3>SOLID Principles</h3></article>
+              <article><h3>Clean Architecture</h3></article>
+              <article><h3>RESTful APIs</h3></article>
               <article><h3>Hive</h3></article>
+              <article><h3>Shared Preferences</h3></article>
+              <article><h3>Firebase Authentication</h3></article>
+              <article><h3>Firestore</h3></article>
+              <article><h3>Responsive UI</h3></article>
+              <article><h3>Git - GitHub</h3></article>
+              <article><h3>Dependency Injection</h3></article>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
+<section id="projects">
+  <p class="section__text__p1">Browse My Recent</p>
+  <h1 class="title">Projects</h1>
+  <div class="experience-details-container">
+    <div class="about-containers">
 
-          <div class="details-container color-container">
-            <h2 class="experience-sub-title project-title">Dr Chat – Graduation Project</h2>
-            <p>
-              A therapist chatbot that allows users to share their mental health concerns and receive support.  
-              Developed with Flutter and Flask backend.  
-              Implemented secure authentication, guest mode, and profile management.  
-              Stored user data and chat history with MongoDB and Hive for offline access.
-            </p>
-            <p class="project-date"><strong>07/2025 – 10/2025</strong></p>
-            <div class="btn-container" style="margin-top:20px;">
-              <button class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/mohamed-oraby10/Dr-Chat'">
-                Github
-              </button>
-            </div>
-          </div>
-
-          <div class="details-container color-container">
-            <h2 class="experience-sub-title project-title">DayTask – Task Management App</h2>
-            <p>
-              Productivity application for team collaboration and task management.  
-              Built task scheduling, progress tracking, and team collaboration features.  
-              Implemented real-time chat and notifications.  
-              Integrated Firebase Authentication, Firestore, Hive with Bloc/Cubit & Provider.
-            </p>
-            <p class="project-date"><strong>03/2025 – 06/2025</strong></p>
-            <div class="btn-container" style="margin-top:20px;">
-              <button class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/mohamed-oraby10/day_task'">
-                Github
-              </button>
-            </div>
-          </div>
-
+      <!-- Quick Mart -->
+      <div class="details-container color-container">
+        <div class="project-image-container">
+          <img src="./assets/ommerce (2).png" alt="Quick Mart Project Image">
+        </div>
+        <h2 class="experience-sub-title project-title">Quick Mart – E-Commerce App</h2>
+        <ul>
+          <li>Quick Mart – A modern e-commerce app built with Flutter.</li>
+          <li>Clean Architecture with dependency injection using GetIt.</li>
+          <li>Functional programming using Dartz.</li>
+          <li>Offline caching using Hive.</li>
+          <li>Secure authentication with multi-language support (RTL).</li>
+          <li>Shopping cart management, product browsing & filtering, and address management.</li>
+          <li>State management using BLoC/Cubit with Hydrated BLoC for persistence.</li>
+          <li>Backend powered by Firebase (Authentication & Firestore).</li>
+        </ul>
+        <p class="project-date"><strong>12/2025 – 02/2026</strong></p>
+        <div class="btn-container" style="margin-top:20px;">
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/mohamed-oraby10/quick_mart'">
+            Github
+          </button>
         </div>
       </div>
-    </section>
+
+      <!-- Dr Chat -->
+      <div class="details-container color-container">
+        <div class="project-image-container">
+          <img src="./assets/Add a heading.png" alt="Dr Chat Project Image">
+        </div>
+        <h2 class="experience-sub-title project-title">Dr Chat – Therapist Chatbot</h2>
+        <ul>
+          <li>A therapist chatbot that allows users to share their mental health concerns and receive support and guidance.</li>
+          <li>Implemented MVVM architecture with dependency injection using GetIt.</li>
+          <li>Secure authentication (Email/Password, Google), guest mode, and profile management using Firebase.</li>
+          <li>Chat history and user data stored with Firestore for persistence and offline access.</li>
+          <li>Clean modern UI with multi-language support and dark/light mode.</li>
+          <li>Used Shared Preferences and Bloc/Cubit for state management.</li>
+        </ul>
+        <p class="project-date"><strong>07/2025 – 10/2025</strong></p>
+        <div class="btn-container" style="margin-top:20px;">
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/mohamed-oraby10/Dr-Chat'">
+            Github
+          </button>
+        </div>
+      </div>
+
+      <!-- DayTask -->
+      <div class="details-container color-container">
+        <div class="project-image-container">
+          <img src="./assets/212832 (1).png" alt="DayTask Project Image">
+        </div>
+        <h2 class="experience-sub-title project-title">DayTask – Task Management App</h2>
+        <ul>
+          <li>A complete work environment in a single platform – Productivity application for team collaboration and task management.</li>
+          <li>Built task scheduling, progress tracking, and team collaboration features.</li>
+          <li>Implemented real-time chat and notifications to improve communication.</li>
+          <li>Integrated Firebase Authentication, Firestore, and Hive.</li>
+          <li>State management using Bloc/Cubit and Provider.</li>
+        </ul>
+        <p class="project-date"><strong>03/2025 – 06/2025</strong></p>
+        <div class="btn-container" style="margin-top:20px;">
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/mohamed-oraby10/day_task'">
+            Github
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
 
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
